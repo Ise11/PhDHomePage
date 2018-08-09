@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.find(params[:id])
+    @category = Category.find(params[:id])
 
     if logged_in?(:site_admin)
       @blogs = @category.blogs.recent.page(params[:page]).per(5)
