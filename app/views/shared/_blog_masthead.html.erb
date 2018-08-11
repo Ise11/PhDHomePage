@@ -1,10 +1,9 @@
-<div class="blog-header">
+<div class="blog-header pt-5 card-home">
   <div class="container">
-    <h1 class="blog-title">My Blog</h1>
-    <p class="lead blog-description">An example blog template built with Bootstrap.</p>
-    <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
-
-   <%= link_to "Categories", categories_path %>
-
+    <h1 class="blog-title">Blog naukowy dr XY</h1>
+    <p class="lead blog-description mb-5">Lorem ipsum dolor.</p>
   </div>
 </div>
+<% if logged_in?(:site_admin) %>
+  <%= link_to 'Write a new Post', (new_blog_path if logged_in?(:site_admin)), class: 'btn btn-primary mb-4'  %>
+<% end %>

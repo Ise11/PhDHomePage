@@ -12,7 +12,6 @@ module ApplicationHelper
        if session[:source]
         greeting = "Thanks from visiting from #{session[:source]}"
         content_tag(:p, greeting)
-
         end
     end
 
@@ -69,6 +68,6 @@ module ApplicationHelper
   end
 
   def alert_generator msg
-    js add_gritter(msg, title: "Jordan Hudgens Portfolio", sticky: false)
+    js add_gritter(msg, title: "PhD Tomasz Banyś home site", sticky: false)
   end
 end

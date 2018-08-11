@@ -24,6 +24,6 @@ module BlogsHelper
   end
 
   def blog_status_color blog
-    'color: red;' if blog.draft?
+    'opacity: .5;' if blog.draft?
   end
 end

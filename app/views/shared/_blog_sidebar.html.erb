@@ -5,7 +5,7 @@
   </div>
 
   <div class="sidebar-module">
-    <h4>Catego</h4>
+    <h4>Categories</h4>
       <% @side_bar_categories.each do |category| %>
     <p><%= link_to category.title, category_path(category) %></p>
       <% end %>
@@ -13,11 +13,13 @@
 
   <div class="sidebar-module">
     <h4>Elsewhere</h4>
-    <ol class="list-unstyled social-links">
-      <li><a href="#"><%= fa_icon "github" %></a></li>
-      <li><a href="#"><%= fa_icon "instagram" %></a></li>
+    <ol class="list-unstyled social-links pl-2">
       <li><a href="#"><%= fa_icon "facebook" %></a></li>
       <li><a href="#"><%= fa_icon "twitter" %></a></li>
+      <li><a href="#"><%= fa_icon "linkedin" %></a></li>
+      <li><a href="#">  <%= image_tag("researchgate-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
+      <li><a href="#">  <%= image_tag("goldenline-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
+      <li><a href="#">  <%= image_tag("academia-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
     </ol>
   </div>
 </div>

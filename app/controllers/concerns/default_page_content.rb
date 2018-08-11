@@ -6,7 +6,7 @@ module DefaultPageContent
     end
 
     def set_page_defaults
-        @page_title = "Portfolio | My Portfolio Website"
-        @seo_keywords = "My portfolio"
+        @page_title = "PhD Thomas A.J. Banyś | Home page"
+        @seo_keywords = "law astronomy"
     end
 end
