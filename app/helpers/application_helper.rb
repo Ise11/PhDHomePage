@@ -26,6 +26,14 @@ module ApplicationHelper
             title: 'About Me'
           },
           {
+            url: publications_path,
+            title: 'Publications'
+          },
+          {
+            url: teaching_path,
+            title: 'Teaching'
+          },
+          {
             url: contact_path,
             title: 'Contact'
           },

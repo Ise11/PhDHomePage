@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   end
 
   get 'about', to: 'pages#about'
+  get 'publications', to: 'pages#publications'
+  get 'teaching', to: 'pages#teaching'
   get 'contact', to: 'pages#contact'
   get 'news', to: 'pages#news'
 

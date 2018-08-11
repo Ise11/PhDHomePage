@@ -6,6 +6,12 @@ class PagesController < ApplicationController
   def about
   end
 
+  def publications
+  end
+
+  def teaching
+  end
+
   def contact
   end
 
