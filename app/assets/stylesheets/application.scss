@@ -452,3 +452,19 @@ opacity-1 {
 // 	}
 //
 // }
+
+.card-devise {
+  background-color: #1C1B20;
+  opacity: 0.9;
+  color: white;
+  width: 60%;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$body-bg: #c1bdba;
