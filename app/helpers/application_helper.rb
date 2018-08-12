@@ -42,10 +42,6 @@ module ApplicationHelper
             title: 'Blog'
           },
           {
-            url: projects_path,
-            title: 'Portfolio'
-          },
-          {
             url: news_path,
             title: 'News'
           },

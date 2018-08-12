@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_02_185407) do
+ActiveRecord::Schema.define(version: 2018_08_12_082958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,25 +55,6 @@ ActiveRecord::Schema.define(version: 2018_07_02_185407) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "projects", force: :cascade do |t|
-    t.string "title"
-    t.string "subtitle"
-    t.text "body"
-    t.text "main_image"
-    t.text "thumb_image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "position"
-  end
-
-  create_table "technologies", force: :cascade do |t|
-    t.string "name"
-    t.bigint "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_technologies_on_project_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -89,6 +70,9 @@ ActiveRecord::Schema.define(version: 2018_07_02_185407) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "roles"
+    t.string "provider"
+    t.string "uid"
+    t.text "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -96,5 +80,4 @@ ActiveRecord::Schema.define(version: 2018_07_02_185407) do
   add_foreign_key "blogs", "categories"
   add_foreign_key "comments", "blogs"
   add_foreign_key "comments", "users"
-  add_foreign_key "technologies", "projects"
 end
