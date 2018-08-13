@@ -17,6 +17,13 @@ class Blog < ApplicationRecord
   #   limit(2)
   # end
 
+  def self.search(params)
+    blog = Blog.where("body LIKE ? or title LIKE ?", "%#{params[:search]}%",
+           "%#{params[:search]}%") if params[:search].present?
+
+
+  end
+
   def self.recent
     order("created_at DESC")
   end

@@ -5,10 +5,17 @@
   </div>
 
   <div class="sidebar-module">
+    <%= form_tag search_blogs_path, method: :get do %>
+      <%=text_field_tag :search, nil, placeholedr: "Search", class: 'search-form' %>
+      <%= submit_tag "Search", class: 'btn btn-primary my-2' %>
+    <% end %>
+  </div>
+
+  <div class="sidebar-module">
     <h4>Categories</h4>
-      <% @side_bar_categories.each do |category| %>
+    <% @side_bar_categories.each do |category| %>
     <p><%= link_to category.title, category_path(category) %></p>
-      <% end %>
+    <% end %>
   </div>
 
   <div class="sidebar-module">
@@ -17,9 +24,9 @@
       <li><a href="#"><%= fa_icon "facebook" %></a></li>
       <li><a href="#"><%= fa_icon "twitter" %></a></li>
       <li><a href="#"><%= fa_icon "linkedin" %></a></li>
-      <li><a href="#">  <%= image_tag("researchgate-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
-      <li><a href="#">  <%= image_tag("goldenline-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
-      <li><a href="#">  <%= image_tag("academia-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
+      <li><a href="#"><%= image_tag("researchgate-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
+      <li><a href="#"><%= image_tag("goldenline-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
+      <li><a href="#"><%= image_tag("academia-logo.svg", :alt => "researchgate icon", :class => "img-logo") %></a></li>
     </ol>
   </div>
 </div>
